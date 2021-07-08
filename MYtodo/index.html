@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./calender.css">
+  <link rel="stylesheet" href="./mytodo.css">
+  <link rel="stylesheet" href="./diary.css">
+  <title>Document</title>
+  <script
+      src="https://kit.fontawesome.com/be90e85040.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+  <section class="page1">
+    
+  <div class="calender">
+    <div class="header">
+      <div class="year-month"></div>
+      <h1 class="calenderh1">Calender</h1>
+      <div class="nav">
+        <button class="nav-btn go-prev">&lt;</button> 
+        <button class="nav-btn go-today">today</button>
+        <button class="nav-btn go-next">&gt;</button>
+        <!-- 클래스 이름 두개주는거임그럼? -->
+      </div>
+      <!-- td.특수기호 -->
+    </div>
+    <div class="main">
+      <div class="days">
+        <div class="day">일</div>
+        <div class="day">월</div>
+        <div class="day">화</div>
+        <div class="day">수</div>
+        <div class="day">목</div>
+        <div class="day">금</div>
+        <div class="day">토</div>
+      </div>
+      <div class="dates"></div>
+    </div>
+  </div>
+</section>
+<section class="page2">
+  <h1 class="mytodoh1">Todo-List</h1>
+  <div class="mytodo">
+    <div class="todoindex"><div class="todotoday clock">
+
+    </div>
+ 
+    <select name="todos" class="todofilter">
+      <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+    </select>
+  </div>
+    <div class="todobody">
+      <ul class="todolist"></ul>
+    </div>
+    <form class="todonote">
+      <input type="text"class="todoinput" placeholder="add todo" autofocus required /> 
+      <button class="inputicon"><img  src="./plus-circle-solid.svg" alt=""></button>
+    </form>
+    <!-- button은 폼값이 주어진 태그나 부모태그중에 폼태그에 종속 -->
+    </div>
+  </div>
+</section>
+<section class="page3">
+<div class="dlayout">
+  <form id="indexo" name="indexi" class="dindex">
+    <div class="dtitle"><p>Diary</p></div>
+    <div class="womb"></div>
+    <div class="buttons">
+      <button class="selector select" value="selectall">Select All</button>
+      <button class="selector unselect" value="unselectall">Unselect All</button>
+      <button class="selector delete" value="delete">Delete</button>
+    </div>
+    
+  </form>
+  <div class="diary">
+    <div class="submit">
+    <div class="submitime clock"></div>
+    <form class="submitarea">
+      Title:    <input type="text" class="title"></form>
+      <button class="dsubmit"><img src="./arrow-circle-right-solid.svg" alt=""></button>
+      
+    </form>
+  </div>
+    <textarea  class="writing" placeholder="  shit something..."></textarea>
+</div>
+</div>
+</section>
+<script src="./calender.js"></script>
+<script src="./mytodo.js"></script>
+<script src="./diary.js"></script>
+</body>
+</html>

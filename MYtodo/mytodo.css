@@ -1,0 +1,210 @@
+:root {
+  --page1-color: #20bf6b;
+  --page2-color: #f7b731;
+  --page3-color: #4b7bec;
+  --text-color: white;
+}
+
+html {
+  font-size: 62.5%;
+  /* 10px=1rem */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*걍 깔끔하게 박스만들어 준다 생각혀 박스를 외곽으로확장해서
+  스크롤을 늘리지 않고 안에서 해결하도록*/
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.page2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* 1vh는 뷰포트값(height)의 1/00 즉 이말은 높이를화면에꽉차게하라 */
+  background-color: var(--page2-color);
+  width: 70%;
+  min-width: 600px;
+  box-shadow: 9px 9px 9px rgb(126, 124, 124);
+
+}
+
+.mytodoh1 {
+  color: var(--text-color);
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 7rem;
+  font-weight: 500;
+  letter-spacing: 8px;
+  
+}
+.mytodo {
+  display: flex;
+  flex-direction: column;
+  min-width: 50vw;
+  max-width: 50vw;
+
+  border: 3px solid var(--text-color);
+  margin-bottom: 50px;
+}
+.todoindex {
+  color: var(--text-color);
+  font-size: 2rem;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 30px;
+  font-weight: 300;
+}
+
+.todofilter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* 네이티브 외형 감추기 */
+  background-color: var(--text-color);
+  border: 3px solid var(--text-color);
+  border-radius: 1rem;
+  outline: none;
+  color: var(--page2-color);
+  text-align-last: center;
+  /* 셀렉트태그 옵션 가운데정렬 */
+  font-size: 2rem;
+  height: 35px;
+  margin-top: 7px;
+}
+
+.todotoday {
+  background-color: var(--page2-color);
+
+  margin-top: 7.5px;
+  height: 40px;
+  width: 400px;
+  outline: none;
+  font-size: 3rem;
+}
+
+.todobody {
+  border-top: 3px solid var(--text-color);
+  border-bottom: 3px solid var(--text-color);
+  color: var(--text-color);
+  font-size: 4rem;
+  height: 600px;
+  overflow: scroll;
+}
+.todo-item{
+  display: inline-block;
+  overflow: scroll;
+  word-break: break-all;
+  /* 자동줄바꿈 */
+}
+
+.todonote {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-color);
+  font-size: 3rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 55px;
+}
+.todoinput {
+  background-color: var(--page2-color);
+  border: 1px dashed var(--text-color);
+  margin-top: 7.5px;
+  height: 40px;
+  min-width: 35vw;
+  outline: none;
+  font-size: 3rem;
+  
+
+}
+input {
+  color: white;
+  caret-color: var(--text-color);
+  
+}
+/* 깜박이는 텍스트 커서 이름이 카렛이래 */
+.inputicon {
+  background-color: var(--page2-color);
+  width: 40px;
+  height: 40px;
+  margin-top: 7.5px;
+  border-radius: 2rem;
+  border: 1px solid var(--text-color);
+  cursor: pointer;
+}
+
+.fas fa-plus-circle {
+  width: 40px;
+  height: 40px;
+}
+
+.todolist {
+  list-style: none;
+  overflow: scroll;
+}
+
+.todo {
+  font-size: 3rem;
+  border: 2px solid var(--text-color);
+  margin: 10px 5px 0 5px;
+  padding: 0 5px 0 5px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+/* transition은 해당 태그의속성이 변경될때(여기서는 .completed가 실행되면서 todo의 속성이 바뀜)
+애니매이션 속도를 조절한다. */
+
+.todo-item {
+  padding-top: 5px;
+}
+.complete-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: var(--page2-color);
+  margin-right: 10px;
+  padding-top: 5px;
+}
+
+.delete-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: var(--page2-color);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateX(50rem);
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+input::placeholder {
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.todo:hover{
+  color: var(--page2-color);
+  background-color: var(--text-color);
+}

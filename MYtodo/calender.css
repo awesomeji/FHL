@@ -1,0 +1,169 @@
+:root {
+  --page1-color: #20bf6b;
+  --page3-color: #4b7bec;
+  --text-color: white;
+}
+
+html {
+  font-size: 62.5%;
+  /* 10px=1rem */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*걍 깔끔하게 박스만들어 준다 생각혀 박스를 외곽으로확장해서
+  스크롤을 늘리지 않고 안에서 해결하도록*/
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.page1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+  border: solid var(--page1-color);
+  /* 1vh는 뷰포트값(height)의 1/00 즉 이말은 높이를화면에꽉차게하라 */
+  background-color: var(--page1-color);
+  width: 70%;
+  min-width: 600px;
+  box-shadow: 9px 9px 9px rgb(126, 124, 124);
+
+}
+.calender {
+  min-width: 600px;
+  margin: 20px 50px 50px 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.year-month {
+  font-size: 35px;
+}
+
+.calenderh1 {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+.nav {
+  display: flex;
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+}
+
+.nav-btn {
+  width: 28px;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  line-height: 34px;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.go-today {
+  width: 75px;
+  border-left: 2px solid var(--text-color);
+  border-right: 2px solid var(--text-color);
+}
+
+.days {
+  display: flex;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+/* marginorder
+case 4: clockwise
+case 3 : top (left right) bottom
+case 2 : (top bottom), (left right)
+case 1 : (top bottom left right) */
+
+.day {
+  width: calc(100% / 7);
+  /* 부모가플렉스라서가능한건가? */
+  text-align: center;
+  font-size: 2rem;
+}
+
+.dates {
+  display: flex;
+  flex-flow: row wrap;
+  height: 700px;
+  border-top: 1px solid var(--page1-color);
+  border-right: 1px solid var(--page1-color);
+  background-color: var(--text-color);
+  color: var(--page1-color);
+  border-radius: 10px;
+}
+/* flex-flow(wrap) 컨테이너안의 요소들이 좁을떄줄바꿈해주는 기능 유용할듯 */
+.date {
+  width: calc(100% / 7);
+  border-bottom: 1px solid var(--page1-color);
+  border-left: 1px solid var(--page1-color);
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 10px;
+  font-size: 2rem;
+}
+/* 보더값 왜저렇게 줬는지 감오나? */
+
+.day:nth-child(7n + 1),
+.date:nth-child(7n + 1) {
+  color: #d13e3e;
+}
+
+.day:nth-child(7n),
+.date:nth-child(7n) {
+  color: #396ee2;
+}
+
+.other {
+  opacity: 0.3;
+}
+.today {
+  position: relative;
+  color: #ffffff;
+  z-index: 0;
+}
+
+.today::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: var(--page1-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+}
+/* 가상클래스:https://developer.mozilla.org/ko/docs/Web/CSS/::before */
+
+
+nav:hover{
+  color: var(--page1-color);
+  background-color: var(--text-color);
+}

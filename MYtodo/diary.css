@@ -1,0 +1,194 @@
+:root {
+  --page1-color: #20bf6b;
+  --page2-color: #f7b731;
+  --page3-color: #4b7bec;
+  --text-color: white;
+}
+
+html {
+  font-size: 62.5%;
+  /* 10px=1rem */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*걍 깔끔하게 박스만들어 준다 생각혀 박스를 외곽으로확장해서
+  스크롤을 늘리지 않고 안에서 해결하도록*/
+  font-family: sans-serif;
+}
+
+.page3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* 1vh는 뷰포트값(height)의 1/00 즉 이말은 높이를화면에꽉차게하라 */
+  background-color: var(--page3-color);
+  width: 70%;
+  min-width: 600px;
+  box-shadow: 9px 9px 9px rgb(126, 124, 124),9px 9px 9px rgb(126, 124, 124);
+}
+
+.dlayout {
+  min-height: 90vh;
+  max-height: 90vh;
+  border: 1px solid var(--text-color);
+  display: flex;
+  
+
+}
+.dtitle {
+  min-height: 10%;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.dindex {
+  min-width: 10vw;
+  max-width: 15vw;
+  border-right: 1px solid var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.diary {
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  
+
+}
+.submit {
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  border-bottom: 1px solid var(--text-color);
+}
+.submitime {
+  padding: 25px 0 0 15px;
+
+  color: var(--text-color);
+  min-width: 50%;
+  font-size: 3rem;
+  font-weight: 300;
+}
+.submitarea {
+  padding: 20px 0 0 0;
+  min-width: 40%;
+
+  color: var(--text-color);
+  font-size: 3rem;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+.title {
+  background-color: var(--page3-color);
+  border: 1px dashed var(--text-color);
+  font-size: 3rem;
+  outline: none;
+  height: 40px;
+  width: 200px;
+
+  letter-spacing: 3px;
+  font-weight: 300;
+  
+  
+}
+.dsubmit {
+  padding-top: 20px;
+  margin-left:10px;
+  height: 40px;
+  width: 40px;
+  background-color: var(--page3-color);
+  border: none;
+  border-radius:50%;
+  cursor: pointer;
+
+}
+.dtitle {
+  color: var(--text-color);
+  text-align: center;
+  display: table;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 20px;
+  /* 자간 */
+}
+
+p {
+  display: table-cell;
+  vertical-align: middle;
+}
+.writing {
+  background-color: var(--page3-color);
+  border: none;
+  height: 90%;
+  color: var(--text-color);
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+textarea::placeholder {
+  color: var(--text-color);
+  opacity: 0.5;
+  
+}
+textarea{
+  resize: none;
+}
+.indexlayout {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 1.5rem;
+  border: 1px solid var(--text-color);
+  margin:5px;
+  
+  
+}
+
+.invisible {
+  display:none ;
+}
+.womb{
+  overflow: scroll;
+}
+.selector{
+  color: var(--text-color);
+  width: 100%;
+  border:none;
+  border-top: 1px solid var(--text-color);
+  min-height: 5%;
+  background-color: var(--page3-color);
+  outline: none;
+  font-size: 3rem;
+  letter-spacing: 8px;
+  font-weight: 300;
+  
+}
+
+.index{
+  word-break: break-all;
+   
+}
+
+
+.selector:hover{
+  color:var(--page3-color);
+  background-color: var(--text-color);
+
+}
+
+.dsubmit:hover{
+  box-shadow: -3px -3px 3px rgb(172, 172, 172), 3px 3px 3px rgb(237, 237, 237),;
+  transition: 0.3s;
+}
+
+.indexlayout:hover{
+  color:var(--page3-color);
+  background-color: var(--text-color);
+}

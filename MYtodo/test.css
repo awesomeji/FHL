@@ -1,0 +1,33 @@
+.trash {
+  display: none;
+}
+
+.frame {
+  display: flex;
+  border: 1px solid black;
+  width: 50vw;
+}
+
+.indexlist {
+  width: 20%;
+}
+
+.notepad {
+  width: 80%;
+  border-left: 1px solid black;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+.indexlayout {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 5px 0 0 0;
+}
+
+.essence{
+  display: none;
+}
